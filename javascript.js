@@ -7,6 +7,7 @@ const loadBook = () => {
     // checking if input is there
     if (searchInput === '') {
         bookSearchResult.innerHTML = `<h2 class="text-warning">Write something to search.<h2>`
+        document.getElementById("totalsearch").innerHTML = `<h5 class="text-white text-center fw-bold">There are no results as you didn't write anything!</h5>  `
 
     }
     else {
