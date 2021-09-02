@@ -47,7 +47,7 @@ const docs = (booksNumber, books) => {
                         <h4 class="fs-2 card-title">${book.title}</h4>
                         <p class="fw-bold fs-6 card-text">Author:${book.author_name[0]}</p>
                         <p>Publisher:${book.publisher[0]}</p>
-                        <p>First Publish Date:${book.publish_date[0]}</p>
+                        <p>Publish Date:${book.publish_date[0]}</p>
                         <p>First Publish Year:${book.first_publish_year}</p>
 
                         </div>
