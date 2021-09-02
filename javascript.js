@@ -44,7 +44,7 @@ const docs = books => {
                          <img class=" rounded-3 mx-auto w-100 p-4 rounded-3" src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h4 class="fs-2 card-title">${book.title}</h4>
-                        <p class="fw-bold fs-6 card-text">Author Name:${book.author_name[0]}</p>
+                        <p class="fw-bold fs-6 card-text">Author:${book.author_name[0]}</p>
                         <p>Publisher:${book.publisher[0]}</p>
                         <p>First Publish Date:${book.publish_date[0]}</p>
                         <p>First Publish Year:${book.first_publish_year}</p>
