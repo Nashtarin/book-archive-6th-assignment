@@ -1,4 +1,3 @@
-
 const bookSearchResult = document.getElementById("bookSearchResult");
 // Loading data api
 const loadBook = () => {
@@ -18,9 +17,7 @@ const loadBook = () => {
 
 }
 const docs = books => {
-
-    bookSearchResult.textContent = '';
-
+    document.getElementById("totalsearch").innerHTML = `<h3 class="text-white text-center fw-bold">${books.length} results are found`
     if (books.length === 0) {
         bookSearchResult.innerHTML = `<h2>No Result found!<h2>`
 
@@ -29,9 +26,6 @@ const docs = books => {
 
 
     books.forEach(book => {
-        console.log(book);
-
-
 
         const div = document.createElement('div');
         div.classList.add("col-md-6");
@@ -56,8 +50,5 @@ const docs = books => {
     });
 
 }
-
-
-
 
 
