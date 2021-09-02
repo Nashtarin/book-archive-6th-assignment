@@ -1,19 +1,24 @@
+
+const bookSearchResult = document.getElementById("bookSearchResult");
 // Loading data api
-
-
-
 const loadBook = () => {
     const searchId = document.getElementById("searchText");
     const searchInput = searchId.value;
     searchId.value = '';
+    if (searchInput === '') {
+        bookSearchResult.innerHTML = `<h2 class="text-warning">Write something to search.<h2>`
 
-    const url = `https://openlibrary.org/search.json?q=${searchInput}`;
-    fetch(url)
-        .then(res => res.json())
-        .then(data => docs(data.docs));
+    }
+    else {
+        const url = `https://openlibrary.org/search.json?q=${searchInput}`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => docs(data.docs));
+    }
+
 }
 const docs = books => {
-    const bookSearchResult = document.getElementById("bookSearchResult");
+
     bookSearchResult.textContent = '';
 
     if (books.length === 0) {
