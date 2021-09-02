@@ -13,16 +13,16 @@ const loadBook = () => {
         const url = `https://openlibrary.org/search.json?q=${searchInput}`;
         fetch(url)
             .then(res => res.json())
-            .then(data => docs(data.docs));
+            .then(data => docs(data.numFound, data.docs,));
     }
 
 }
-const docs = books => {
-    console.log(books);
-    // total searche result
-    document.getElementById("totalsearch").innerHTML = `<h3 class="text-white text-center fw-bold">${books.length} results are found`
-    //error handling if no results are found
+const docs = (booksNumber, books) => {
     bookSearchResult.textContent = '';
+    // total searche result
+    document.getElementById("totalsearch").innerHTML = `<h3 class="text-white text-center fw-bold">${booksNumber} results are found`
+    //error handling if no results are found
+
 
     if (books.length === 0) {
         bookSearchResult.innerHTML = `<h2>No Results are found!<h2>`
