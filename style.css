@@ -1,8 +1,9 @@
 
-
+/* styling for image tag */
 img{
     height:311px;
 }
+/* Styling for h2 tag */
 h2{text-align: right;
 color:red;
 font-size: large;

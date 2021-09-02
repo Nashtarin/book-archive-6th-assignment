@@ -4,6 +4,7 @@ const loadBook = () => {
     const searchId = document.getElementById("searchText");
     const searchInput = searchId.value;
     searchId.value = '';
+    // checking if input is there
     if (searchInput === '') {
         bookSearchResult.innerHTML = `<h2 class="text-warning">Write something to search.<h2>`
 
@@ -17,13 +18,15 @@ const loadBook = () => {
 
 }
 const docs = books => {
+    // total searche result
     document.getElementById("totalsearch").innerHTML = `<h3 class="text-white text-center fw-bold">${books.length} results are found`
+    //error handling if no results are found
     if (books.length === 0) {
-        bookSearchResult.innerHTML = `<h2>No Result found!<h2>`
+        bookSearchResult.innerHTML = `<h2>No Results are found!<h2>`
 
     }
 
-
+    //adding div for each book and it's details
 
     books.forEach(book => {
 
