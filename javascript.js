@@ -21,10 +21,13 @@ const docs = books => {
     // total searche result
     document.getElementById("totalsearch").innerHTML = `<h3 class="text-white text-center fw-bold">${books.length} results are found`
     //error handling if no results are found
+    bookSearchResult.textContent = '';
+
     if (books.length === 0) {
         bookSearchResult.innerHTML = `<h2>No Results are found!<h2>`
 
     }
+
 
     //adding div for each book and it's details
 
